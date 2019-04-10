@@ -43,7 +43,7 @@
 \begin{frame}{Motivation}
 
 \begin{itemize}	
-	\item I would like to estimate the tracking efficiency 
+	\item I would like to estimate the tracking efficiency on phase 2 data
 	\item I use Bhabha events because if one track is reconstructed then the other particle should also produce a track
 
 \end{itemize}
@@ -124,15 +124,46 @@
 	
 \end{frame}
 
-\begin{frame}{Running on MC}
+
+\begin{frame}{Original idea}
+		\begin{itemize}
+			
+		\item Tread every hit in the ECL as a photon
+		\item After reconstruction, check if there is a track associated with the cluster
+		
+	\end{itemize}
+	
+\begin{figure}
+	\includegraphics[width=11cm]{Plots/oldSc}
+\end{figure}
+\begin{itemize}
+	\item As a first check I ran over MC11 $\textrm{ee}\rightarrow\textrm{ee}$ samples with the same steering file
+	\item Far too few vpho were reconstructed
+	\item Explanation: The $\gamma$ list is only filled by particles without a track
+	\item So the reconstruction from two $\gamma$ lists is exactly what we don't need
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{How to proceed}
 	\begin{itemize}
-		\item At first I ran over MC11 $\textrm{ee}\rightarrow\textrm{ee}$ samples with the same steering file but I almost had no events in the gamma list
-		\item 1st problem: ECL hits are written in the gamma list only if they have no track associated. Not every ECL hit is written in the gamma list
-		\item 2nd problem: I also have to look at events with only one charge particle tracked $\rightarrow$ I have to \textit{reconstruct}: $\textrm{vpho}\rightarrow \gamma \textrm{e}$ and $\textrm{vpho}\rightarrow \textrm{ee}$ 
+		\item If there is a cluster in the ECL, then we look if that cluster has a track associated. If it has than it is a electron/positron. If it has not then it is a gamma 
+		\item So the list we want is the electron list plus the gamma list
+		
 		 
 	\end{itemize}
+
 \begin{figure}
-	\includegraphics[width=5.5cm]{Plots/MCDeltaPhi}
+	\includegraphics[width=11cm]{Plots/newSc}
+\end{figure}
+
+\begin{itemize}
+	\item 
+\end{itemize}
+
+\begin{figure}
+	\includegraphics[width=5.5cm]{Plots/isSignalDeltaPhi}
 \end{figure}
 
 
