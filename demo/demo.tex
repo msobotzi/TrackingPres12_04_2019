@@ -19,7 +19,7 @@
 
 \title{Bhabha Tracking Efficiencies}
 %\subtitle{A modern beamer theme}
-\date{01.03.2019}
+\date{12.04.2019}
 \author{Martin Sobotzik}
 \institute{Johannes Gutenberg Universit\"at Mainz}
 % \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
@@ -43,20 +43,28 @@
 \begin{frame}{Motivation}
 
 \begin{itemize}	
-	\item I would like to estimate the tracking efficiency Bhabha events
-	\item One possible way to do it is to select the electrons using only information coming from the ECL (they are therefore labeled and treated as gammas)
-	
-	\item Once selected a pure electron sample, one can than look at the Tracks related to ECLClusters
-	\item The ratio between the ECLClusters with a Track associated and all the ECLClusters will provide an estimation of tracking efficiency
-	\item This idea comes from some plots presented by Sam in previous  \href{https://confluence.desy.de/display/BI/ECL+Meetings?preview=/84320165/109161400/SCunliffe181123-ECL.pdf}{tracking and ECL} meetings. 
+	\item I would like to estimate the tracking efficiency 
+	\item I use Bhabha events because if one track is reconstructed then the other particle should also produce a track
 
 \end{itemize}
+	\begin{equation*}
+		\epsilon = \frac{\textrm{Number of Bhabha events with exactly 2 tracks}}{\textrm{Number of Bhabha events with one or more tracks}}
+	\end{equation*}
+	
+	\begin{itemize}
+		\item  This idea comes from some plots presented by Sam in previous  \href{https://confluence.desy.de/display/BI/ECL+Meetings?preview=/84320165/109161400/SCunliffe181123-ECL.pdf}{tracking and ECL} meetings.
+	\end{itemize}
+
+
+
+
+
 \end{frame}
 	
 \begin{frame}{Getting Started}
 	
 \begin{itemize} 
-	\item All cuts were taken from Sam's studies:
+	\item Cuts Sam used:
 	
 	
 	\begin{itemize}
@@ -72,7 +80,17 @@
 			\item $\textrm{M}(\textrm{vpho}) > 8.0\,\textrm{GeV} \rightarrow $ To cut away background (not from his email but surely he is using something like that)					
 		\end{itemize}
 	
-\end{itemize}	
+\end{itemize}
+
+\begin{itemize}
+	\item Cuts I use:
+	\begin{itemize}
+		\item $\textrm{M(vpho)}>8.0\, \textrm{GeV}$ $\rightarrow$ For the vpho to have a mass of at least $8\,\textrm{GeV}$, $\textrm{gamma:tag}$ and $\textrm{gamma:probe}$ must have at least an energy of more than $3\,\textrm{GeV}$
+	
+	\end{itemize}
+\end{itemize}
+
+	
 \end{frame}
 
 \begin{frame}{Reproducing Plots}
@@ -80,124 +98,65 @@
 	\begin{itemize}
 		\item The plots in the following slides are produced using prod6 (this is because as a starting point I tried to reproduce Sam's plots)
 		\item Sam used all Prod6 data. I am only using the following: /hsm/belle2/bdata/Data/release-02-01-00/DB00000438 /prod00000006/e0003/4S/r02*/all/mdst.sub00/*.root
-		\item Sam's plots are on the left.	
-		\item Three lines. The middle one is $\textrm{ee} \rightarrow \gamma \gamma$ the two others are $\textrm{ee} \rightarrow \textrm{ee}$
+		
+		\item Sam's plot is on the left.	
+		
 \end{itemize}
 	
 	
 	\begin{figure}
-		\centering
 		\begin{subfigure}{.5\textwidth}
-			\centering
-			\includegraphics[width=5cm]{Plots/prodRecSam.jpeg}
-			
-			\label{fig:sub1}
-		\end{subfigure}%
-		\begin{subfigure}{.5\textwidth}
-			\centering
-			\includegraphics[width=5cm]{Plots/clusterb2b}
-			
-			\label{fig:sub2}
-		\end{subfigure}
-				
-		\label{fig:test}
-	\end{figure}
-	
-	
-\end{frame}
-
-
-\begin{frame}{Reproducing Plots}
-	
-	Same plots but zoomed in:
-	
-		\begin{figure}
-		\centering
-		\begin{subfigure}{.5\textwidth}
-			\centering
-			\includegraphics[width=5cm]{Plots/ZommedSam.jpeg}
-			
-			\label{fig:sub1}
-		\end{subfigure}%
-		\begin{subfigure}{.5\textwidth}
-			\centering
-			\includegraphics[width=5cm]{Plots/zommedb2b}
-			
-			\label{fig:sub2}
-		\end{subfigure}
-		
-		\label{fig:test}
-	\end{figure}
-		
-\end{frame}
-
-
-\begin{frame}{Reproducing Plots}
-\begin{itemize} 
-	\item The middle peak is $\textrm{ee} \rightarrow \gamma \gamma$, the two other peaks are $\textrm{ee} \rightarrow \textrm{ee}$
-	\item My $\textrm{ee} \rightarrow \gamma \gamma$ peak is way higher (Maybe there are some cuts that I am not considering?)
-
-\end{itemize}
-\begin{figure}
-	\centering
-	\begin{subfigure}{.5\textwidth}
 		\centering
 		\includegraphics[width=5cm]{Plots/deltaPhiSam.jpeg}
-	
+		
 		\label{fig:sub1}
 	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth}
-		\centering
-		\includegraphics[width=5cm]{Plots/DeltaPhi.pdf}
-	
-		\label{fig:sub2}
-	\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=5cm]{Plots/DeltaPhi.pdf}
 
-	\label{fig:test}
+\label{fig:sub2}
+\end{subfigure}
+
+\label{fig:test}
+	\end{figure}
+	
+	
+\end{frame}
+
+\begin{frame}{Running on MC}
+	\begin{itemize}
+		\item At first I ran over MC11 $\textrm{ee}\rightarrow\textrm{ee}$ samples with the same steering file but I almost had no events in the gamma list
+		\item 1st problem: ECL hits are written in the gamma list only if they have no track associated. Not every ECL hit is written in the gamma list
+		\item 2nd problem: I also have to look at events with only one charge particle tracked $\rightarrow$ I have to \textit{reconstruct}: $\textrm{vpho}\rightarrow \gamma \textrm{e}$ and $\textrm{vpho}\rightarrow \textrm{ee}$ 
+		 
+	\end{itemize}
+\begin{figure}
+	\includegraphics[width=5.5cm]{Plots/MCDeltaPhi}
+\end{figure}
+
+
+
+\end{frame}
+
+\begin{frame}{More problems}
+	\begin{itemize}
+		\item<1,2> Double peak structure has to be understood 
+		\item<2> Sometimes more than one vpho per event is reconstructed 
+	\end{itemize}
+\begin{figure}
+	\includegraphics<1>[width=5.5cm]{Plots/MCDeltaPhi}
+	\includegraphics<2>[width=5.5cm]{Plots/NumVpho}
 \end{figure}
 
 \end{frame}
 
 
-\begin{frame}{Some more plots}
 
-Here the invariant mass of the virtual photon (vpho) is plotted 
-
-	
-	\begin{figure}
-		\includegraphics[width=8cm]{Plots/vphoM.pdf}
-	\end{figure}
-	
-	
-\end{frame}
-
-
-
-\begin{frame}{Some more plots}
-
-	Here the invariant mass of the virtual photon is plotted against the difference between the b2bpredicted and the reconstructed $\Phi $ angel
-	\begin{figure}
-		\includegraphics[width=8cm]{Plots/PhiM.png}
-	\end{figure}
-	
-	
-\end{frame}
-
-\begin{frame}{Some more plots}
-	Here the invariant mass of the virtual photon is plotted against the number of reconstructed Tracks.
-	\begin{figure}
-		\includegraphics[width=8cm]{Plots/nTrM}
-	\end{figure}
-	
-\end{frame}
-
-\begin{frame}{The next Steps}
+\begin{frame}{Next steps}
 	\begin{itemize}
-		\item Investigate the best cuts for our purposes and apply them
-		\item Select only the $\textrm{ee} \rightarrow \textrm{ee}$ candidates and study the tracking efficiency using that sample
-		\item Produce the same plots shown here using MC sample (from a preliminary study using MC10 it looks like very few events survive applying the described selection)
-	\end{itemize}
+	\item Select best vpho
+	\item Cut on $\Delta \Phi_{\textrm{b2bpred -reco}}$ peak and calculate a first efficiency
+\end{itemize}
 \end{frame}
-
-
 \end{document}
