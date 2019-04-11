@@ -79,9 +79,14 @@
 		\begin{figure}
 			\includegraphics[width=5cm]{Plots/b2b}
 		\end{figure}
+	\begin{itemize}
+	\item The two tracks have opposite curvature due to their charge
+\end{itemize}
+
+
 	\end{frame}
 	
-	
+
 	
 	
 \begin{frame}{Motivation}
@@ -95,8 +100,8 @@
 		\item $\textrm{gamma:probe}$ '$(\textrm{E} > 0.1 )$'
 		\item $\textrm{gamma:tag}$ '$(\textrm{clusterE} > 3.0)$'
 
-			\item $0.296706 < \theta < 2.61799 \rightarrow$ It has to hit the ECL
-			\item $\textrm{nCleanedTracks}[ \textrm{abs}(\textrm{dz}) < 2.0 \textrm{ and } \textrm{abs}(\textrm{dr}) < 0.5 \textrm{ and nCDCHits} > 0 \textrm{ and pt } > 0.15] < 1 \rightarrow $ bad quality hits 
+			\item $0.296706 < \theta < 2.61799 $
+			\item $\textrm{nCleanedTracks}[ \textrm{abs}(\textrm{dz}) < 2.0 \textrm{ and } \textrm{abs}(\textrm{dr}) < 0.5 \textrm{ and nCDCHits} > 0 \textrm{ and pt } > 0.15] < 1  $
 						
 		\end{itemize}
 
@@ -110,6 +115,12 @@
 \begin{textblock*}{0.5\textwidth}(-0.3cm,1cm)
 	$\textrm{vpho} \rightarrow \textrm{gamma:probe} + \textrm{gamma:tag}$
 \end{textblock*}
+
+\begin{textblock*}{0.5\textwidth}(0.1cm,-3cm)
+	Plot by Sam
+\end{textblock*}
+
+
 	
 \end{frame}
 
@@ -152,7 +163,7 @@
 		\begin{textblock*}{0.55\textwidth}(5.1cm,-0.3cm)
 	\begin{itemize}
 		\item<2> MC11 $\textrm{ee}\rightarrow \textrm{ee}$
-		\item<2> very few vpho reconstructed, no tracks associated to the daughters
+		\item<2> very few $\textrm{vpho:bhabha}$ reconstructed, no tracks associated to the daughters
 		\item<2> $\rightarrow$ in the framework the gamma list is filled with objects with an ECL cluster and \underline{NO} track associated
 		\item<2> $\rightarrow$ wrong object to use for our purposes
 	\end{itemize}
@@ -205,7 +216,7 @@
 
 
 
-\begin{frame}{$\Delta \Phi$ distribution, Prodx6}
+\begin{frame}{$\Delta \Phi$ distribution, prod6}
 
 
 \begin{textblock*}{0.5\textwidth}(0cm,-2.5cm)
@@ -215,7 +226,7 @@
 
 \begin{textblock*}{0.5\textwidth}(5cm,-3cm)
 	\begin{itemize}
-		\item Plot of $\Delta \Phi$ using the final vpho list
+		\item The 3 peaks distribution is the result of considering each candidate as "tag" and as "probe"
 		\item \textcolor{blue}{daughter\_0\_b2bClusterPhi - daughter\_1\_clusterPhi}
 		\item<2> \textcolor{red}{daughter\_1\_b2bClusterPhi - daughter\_0\_clusterPhi}
 		\item<2> \textcolor{orange}{Added both hists}
@@ -243,7 +254,7 @@
 	
 	\begin{textblock*}{0.5\textwidth}(5cm,-3cm)
 		\begin{itemize}
-			\item Plot of $\Delta \Phi$ using the final vpho list
+			\item The 3 peaks distribution is the result of considering each candidate as "tag" and as "probe"
 			\item \textcolor{blue}{daughter\_0\_b2bClusterPhi - daughter\_1\_clusterPhi Reconstructed}
 			\item \colorbox{blue}{\textcolor{white}{MCTruthMatched}}
 			\item  \textcolor{red}{daughter\_1\_b2bClusterPhi - daughter\_0\_clusterPhi Reconstructed}
@@ -252,13 +263,7 @@
 		\end{itemize}
 	\end{textblock*}
 	
-	\begin{textblock*}{\textwidth}(0cm,2.5cm)
-	\begin{itemize}
-		\item The difference between reconstructed and MCTruthMatched is caused by inefficiency
-		
-	\end{itemize}
-\end{textblock*}
-	
+
 \end{frame}
 
 
