@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.11.21)  11 APR 2019 14:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.11.21)  11 APR 2019 19:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -973,10 +973,10 @@ Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 )
 
 Package hyperref Warning: Option `pdftex' has already been used,
-(hyperref)                setting the option has no effect on input line 29.
+(hyperref)                setting the option has no effect on input line 39.
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 29.
-Package hyperref Info: Option `breaklinks' set `true' on input line 29.
+Package hyperref Info: Option `colorlinks' set `true' on input line 39.
+Package hyperref Info: Option `breaklinks' set `true' on input line 39.
 
 Package hyperref Warning: Option `pagecolor' is not available anymore.
 
@@ -985,39 +985,23 @@ Package hyperref Warning: Option `pagecolor' is not available anymore.
 l.sty
 Package: pgfplotsthemetol 2016/03/14 PGFplots colors based on Paul Tol's SRON t
 echnical note
-) (./demo.aux
-
-LaTeX Warning: Label `fig:sub1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:sub1' multiply defined.
-
-
-LaTeX Warning: Label `fig:sub2' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:sub2' multiply defined.
-
-
-LaTeX Warning: Label `fig:test' multiply defined.
-
-)
+) (./demo.aux)
 \openout1 = `demo.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1085,7 +1069,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box61
-Package hyperref Info: Link coloring ON on input line 35.
+Package hyperref Info: Link coloring ON on input line 45.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1095,66 +1079,66 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count189
 )
-LaTeX Info: Redefining \ref on input line 35.
-LaTeX Info: Redefining \pageref on input line 35.
-LaTeX Info: Redefining \nameref on input line 35.
+LaTeX Info: Redefining \ref on input line 45.
+LaTeX Info: Redefining \pageref on input line 45.
+LaTeX Info: Redefining \nameref on input line 45.
 
 (./demo.out) (./demo.out)
 \@outlinefile=\write5
 \openout5 = `demo.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 35.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 45.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 35.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 45.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 35.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 35.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 35.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 35.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 45.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 35.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 35.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 45.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 35.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 35.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 35.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 45.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 35.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 35.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 45.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 35.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 45.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 35.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 35.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 35.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 35.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 35.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 35.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 35.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 45.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 45.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 3
+(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 4
 5.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 
-35.
+45.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 35.
+ut line 45.
 
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bas
 ic-dictionary/translator-basic-dictionary-English.dict
@@ -1180,7 +1164,7 @@ Dictionary: translator-numbers-dictionary, Language: English
 orem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 35.
+LaTeX Info: Redefining \includegraphics on input line 45.
 
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.14} (current compat level: 1.9).
@@ -1188,32 +1172,32 @@ enefit from \pgfplotsset{compat=1.14} (current compat level: 1.9).
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 (./demo.nav)
-Overfull \vbox (13.79993pt too high) detected at line 37
+Overfull \vbox (13.79993pt too high) detected at line 47
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 63.
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 75.
 
-LaTeX Font Info:    No file OMScmss.fd. on input line 63.
+LaTeX Font Info:    No file OMScmss.fd. on input line 75.
 
 
 LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 63.
+(Font)              for symbol `textbullet' on input line 75.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 63.
+LaTeX Font Info:    Try loading font information for U+msa on input line 75.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 63.
+LaTeX Font Info:    Try loading font information for U+msb on input line 75.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 63.
+line 75.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
@@ -1221,130 +1205,156 @@ thkerncmss.
 )
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 63.
+(Font)              size <5> substituted on input line 75.
 
 [2
 
-] [3
+] <Plots/b2b.pdf, id=33, 245.66396pt x 257.24994pt>
+File: Plots/b2b.pdf Graphic file (type pdf)
+ <use Plots/b2b.pdf>
+Package pdftex.def Info: Plots/b2b.pdf used on input line 82.
+(pdftex.def)             Requested size: 142.26378pt x 148.97739pt.
 
-] <Plots/deltaPhiSam.jpeg, id=40, 1606.0pt x 1204.5pt>
+[3
+
+ <./Plots/b2b.pdf>] <Plots/deltaPhiSam.jpeg, id=41, 1606.0pt x 1204.5pt>
 File: Plots/deltaPhiSam.jpeg Graphic file (type jpg)
 
 <use Plots/deltaPhiSam.jpeg>
-Package pdftex.def Info: Plots/deltaPhiSam.jpeg used on input line 132.
+Package pdftex.def Info: Plots/deltaPhiSam.jpeg used on input line 114.
 (pdftex.def)             Requested size: 128.0374pt x 96.01276pt.
+ [4
 
-<Plots/DeltaPhi.png, id=41, 1019.81pt x 815.045pt>
-File: Plots/DeltaPhi.png Graphic file (type png)
- <use Plots/DeltaPhi.png>
-Package pdftex.def Info: Plots/DeltaPhi.png used on input line 132.
-(pdftex.def)             Requested size: 128.0374pt x 102.32808pt.
-
-[4
-
- <./Plots/deltaPhiSam.jpeg> <./Plots/DeltaPhi.png>]
-<Plots/oldSc.png, id=52, 681.54625pt x 55.20625pt>
+ <./Plots/deltaPhiSam.jpeg>]
+<Plots/oldSc.png, id=47, 687.56876pt x 57.21375pt>
 File: Plots/oldSc.png Graphic file (type png)
  <use Plots/oldSc.png>
-Package pdftex.def Info: Plots/oldSc.png used on input line 154.
-(pdftex.def)             Requested size: 312.9803pt x 25.3522pt.
+Package pdftex.def Info: Plots/oldSc.png used on input line 169.
+(pdftex.def)             Requested size: 298.75394pt x 24.85983pt.
 
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 154--154
- [] 
+<Plots/DeltaPhi.png, id=48, 1019.81pt x 815.045pt>
+File: Plots/DeltaPhi.png Graphic file (type png)
+ <use Plots/DeltaPhi.png>
+Package pdftex.def Info: Plots/DeltaPhi.png used on input line 169.
+(pdftex.def)             Requested size: 128.0374pt x 102.32808pt.
+
+Overfull \hbox (19.72523pt too wide) in paragraph at lines 169--169
+\OT1/cmss/m/n/10 /DB00000438/prod00000006 
+ []
+
+
+Overfull \hbox (32.58627pt too wide) in paragraph at lines 169--169
+\OT1/cmss/m/n/10 /e0003/4S/r02*/all/mdst.sub00 
  []
 
 [5
 
- <./Plots/oldSc.png>] <Plots/newSc.png, id=58, 881.2925pt x 207.77625pt>
-File: Plots/newSc.png Graphic file (type png)
+ <./Plots/oldSc.png> <./Plots/DeltaPhi.png>]
+File: Plots/oldSc.png Graphic file (type png)
+ <use Plots/oldSc.png>
+Package pdftex.def Info: Plots/oldSc.png used on input line 169.
+(pdftex.def)             Requested size: 298.75394pt x 24.85983pt.
 
-<use Plots/newSc.png>
-Package pdftex.def Info: Plots/newSc.png used on input line 178.
-(pdftex.def)             Requested size: 312.9803pt x 73.78802pt.
+<Plots/dphiMC.pdf, id=54, 569.12625pt x 454.69875pt>
+File: Plots/dphiMC.pdf Graphic file (type pdf)
+ <use Plots/dphiMC.pdf>
+Package pdftex.def Info: Plots/dphiMC.pdf used on input line 169.
+(pdftex.def)             Requested size: 128.0374pt x 102.29585pt.
 
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 178--178
- [] 
+Overfull \hbox (19.72523pt too wide) in paragraph at lines 169--169
+\OT1/cmss/m/n/10 /DB00000438/prod00000006 
+ []
+
+
+Overfull \hbox (32.58627pt too wide) in paragraph at lines 169--169
+\OT1/cmss/m/n/10 /e0003/4S/r02*/all/mdst.sub00 
  []
 
 [6
 
+ <./Plots/dphiMC.pdf, page is rotated 90 degrees>]
+<Plots/newSc.png, id=103, 949.5475pt x 204.765pt>
+File: Plots/newSc.png Graphic file (type png)
+ <use Plots/newSc.png>
+Package pdftex.def Info: Plots/newSc.png used on input line 204.
+(pdftex.def)             Requested size: 298.75394pt x 64.42319pt.
+
+[7
+
  <./Plots/newSc.png>]
-<Plots/isSignalDeltaPhi.pdf, id=66, 569.12625pt x 454.69875pt>
+<Plots/DataLeft.pdf, id=110, 569.12625pt x 454.69875pt>
+File: Plots/DataLeft.pdf Graphic file (type pdf)
+
+<use Plots/DataLeft.pdf>
+Package pdftex.def Info: Plots/DataLeft.pdf used on input line 234.
+(pdftex.def)             Requested size: 142.26378pt x 113.66052pt.
+ [8
+
+ <./Plots/DataLeft.pdf, page is rotated 90 degrees>] <Plots/DataAll.pdf, id=160
+, 569.12625pt x 454.69875pt>
+File: Plots/DataAll.pdf Graphic file (type pdf)
+
+<use Plots/DataAll.pdf>
+Package pdftex.def Info: Plots/DataAll.pdf used on input line 234.
+(pdftex.def)             Requested size: 142.26378pt x 113.66052pt.
+ [9
+
+ <./Plots/DataAll.pdf, page is rotated 90 degrees>]
+<Plots/MCDPhi.pdf, id=209, 569.12625pt x 454.69875pt>
+File: Plots/MCDPhi.pdf Graphic file (type pdf)
+ <use Plots/MCDPhi.pdf>
+Package pdftex.def Info: Plots/MCDPhi.pdf used on input line 262.
+(pdftex.def)             Requested size: 142.26378pt x 113.66052pt.
+
+[10
+
+ <./Plots/MCDPhi.pdf, page is rotated 90 degrees>]
+<Plots/isSignalDeltaPhi.pdf, id=259, 569.12625pt x 454.69875pt>
 File: Plots/isSignalDeltaPhi.pdf Graphic file (type pdf)
 
 <use Plots/isSignalDeltaPhi.pdf>
-Package pdftex.def Info: Plots/isSignalDeltaPhi.pdf used on input line 192.
-(pdftex.def)             Requested size: 156.49014pt x 125.02519pt.
- [7
-
- <./Plots/isSignalDeltaPhi.pdf, page is rotated 90 degrees>]
-File: Plots/isSignalDeltaPhi.pdf Graphic file (type pdf)
- <use Plots/isSignalDeltaPhi.pdf>
-Package pdftex.def Info: Plots/isSignalDeltaPhi.pdf used on input line 252.
+Package pdftex.def Info: Plots/isSignalDeltaPhi.pdf used on input line 327.
 (pdftex.def)             Requested size: 113.81102pt x 90.92426pt.
 
-<Plots/MCgg.pdf, id=116, 569.12625pt x 454.69875pt>
+<Plots/MCgg.pdf, id=260, 569.12625pt x 454.69875pt>
 File: Plots/MCgg.pdf Graphic file (type pdf)
  <use Plots/MCgg.pdf>
-Package pdftex.def Info: Plots/MCgg.pdf used on input line 252.
+Package pdftex.def Info: Plots/MCgg.pdf used on input line 327.
 (pdftex.def)             Requested size: 113.81102pt x 90.92426pt.
 
-<Plots/MCeg.pdf, id=117, 569.12625pt x 454.69875pt>
+<Plots/MCeg.pdf, id=261, 569.12625pt x 454.69875pt>
 File: Plots/MCeg.pdf Graphic file (type pdf)
  <use Plots/MCeg.pdf>
-Package pdftex.def Info: Plots/MCeg.pdf used on input line 252.
+Package pdftex.def Info: Plots/MCeg.pdf used on input line 327.
 (pdftex.def)             Requested size: 113.81102pt x 90.92426pt.
 
-<Plots/MCee.pdf, id=118, 569.12625pt x 454.69875pt>
+<Plots/MCee.pdf, id=262, 569.12625pt x 454.69875pt>
 File: Plots/MCee.pdf Graphic file (type pdf)
  <use Plots/MCee.pdf>
-Package pdftex.def Info: Plots/MCee.pdf used on input line 252.
+Package pdftex.def Info: Plots/MCee.pdf used on input line 327.
 (pdftex.def)             Requested size: 113.81102pt x 90.92426pt.
 
-[8
+[11
 
- <./Plots/MCgg.pdf, page is rotated 90 degrees> <./Plots/MCeg.pdf, page is rota
-ted 90 degrees> <./Plots/MCee.pdf, page is rotated 90 degrees>]
-<Plots/NumVpho.pdf, id=254, 569.12625pt x 454.69875pt>
+ <./Plots/isSignalDeltaPhi.pdf, page is rotated 90 degrees> <./Plots/MCgg.pdf, 
+page is rotated 90 degrees> <./Plots/MCeg.pdf, page is rotated 90 degrees> <./P
+lots/MCee.pdf, page is rotated 90 degrees>]
+<Plots/NumVpho.pdf, id=440, 569.12625pt x 454.69875pt>
 File: Plots/NumVpho.pdf Graphic file (type pdf)
  <use Plots/NumVpho.pdf>
-Package pdftex.def Info: Plots/NumVpho.pdf used on input line 281.
+Package pdftex.def Info: Plots/NumVpho.pdf used on input line 374.
 (pdftex.def)             Requested size: 128.0374pt x 102.29585pt.
-pdfTeX warning (ext4): destination with the same identifier (name{fig:sub1}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.281 \end{frame}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{sub@fig:sub1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.281 \end{frame}
-                  <Plots/NumVphoMC.pdf, id=255, 569.12625pt x 454.69875pt>
+
+<Plots/NumVphoMC.pdf, id=441, 569.12625pt x 454.69875pt>
 File: Plots/NumVphoMC.pdf Graphic file (type pdf)
 
 <use Plots/NumVphoMC.pdf>
-Package pdftex.def Info: Plots/NumVphoMC.pdf used on input line 281.
+Package pdftex.def Info: Plots/NumVphoMC.pdf used on input line 374.
 (pdftex.def)             Requested size: 128.0374pt x 102.29585pt.
-pdfTeX warning (ext4): destination with the same identifier (name{fig:sub2}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.281 \end{frame}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{sub@fig:sub2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.281 \end{frame}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{fig:test}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.281 \end{frame}
-                  [9
+ [12
 
  <./Plots/NumVpho.pdf, page is rotated 90 degrees> <./Plots/NumVphoMC.pdf, page
- is rotated 90 degrees>] [10
+ is rotated 90 degrees>] [13
 
 ]
 \tf@nav=\write6
@@ -1356,11 +1366,11 @@ l.281 \end{frame}
 \tf@snm=\write8
 \openout8 = `demo.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 291.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 291.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 389.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 389.
  (./demo.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 291.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 291.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 389.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 389.
 Package rerunfilecheck Info: File `demo.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1371,39 +1381,34 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 38 ({)
+### simple group (level 1) entered at line 48 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 31697 strings out of 494852
- 763339 string characters out of 6177656
- 956288 words of memory out of 5000000
- 34320 multiletter control sequences out of 15000+600000
- 13496 words of font info for 49 fonts, out of 8000000 for 9000
+ 31751 strings out of 494852
+ 764159 string characters out of 6177656
+ 959288 words of memory out of 5000000
+ 34357 multiletter control sequences out of 15000+600000
+ 16729 words of font info for 61 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 71i,13n,98p,1814b,692s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,13n,98p,1814b,707s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy9.pfb>
-Output written on demo.pdf (10 pages, 424282 bytes).
+mmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy9.pfb>
+Output written on demo.pdf (13 pages, 587393 bytes).
 PDF statistics:
- 403 PDF objects out of 1000 (max. 8388607)
- 209 compressed objects within 3 object streams
- 26 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 591 PDF objects out of 1000 (max. 8388607)
+ 291 compressed objects within 3 object streams
+ 32 named destinations out of 1000 (max. 500000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 

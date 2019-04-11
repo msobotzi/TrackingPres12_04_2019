@@ -18,6 +18,16 @@
 \definecolor{winered}{rgb}{0.5,0,0}
 \newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
 
+
+\defbeamertemplate*{background canvas}{bg}
+{%
+	\color{white}\vrule width\paperwidth height\paperheight% added bg color
+}
+
+
+
+
+
 \title{Bhabha Tracking Efficiencies}
 %\subtitle{A modern beamer theme}
 \date{12.04.2019}
@@ -44,8 +54,9 @@
 \begin{frame}{Motivation}
 
 \begin{itemize}	
-	\item I would like to estimate the tracking efficiency on phase 2 data
-	\item I use Bhabha events because if one track is reconstructed then the other particle should also produce a track
+	\item I am performing an analysis to estimate the tracking efficiency on phase 2 data
+	\item The physics case I am considering is Bhabha events $\textrm{e}^+ \textrm{+e}^- \rightarrow \textrm{e}^+ \textrm{+e}^- $ 
+	\item The definition of efficiency I am going to use is:
 
 \end{itemize}
 	\begin{equation*}
@@ -53,6 +64,7 @@
 	\end{equation*}
 	
 	\begin{itemize}
+		\item After selecting Bhabha events where at least one of the tracks was detected, one can look how many times the second one is found
 		\item  This idea comes from some plots presented by Sam Cunliffe in previous  \href{https://confluence.desy.de/display/BI/ECL+Meetings?preview=/84320165/109161400/SCunliffe181123-ECL.pdf}{tracking and ECL} meetings.
 	\end{itemize}
 
@@ -62,71 +74,96 @@
 
 \end{frame}
 	
-\begin{frame}{Getting Started}
 	
-\begin{itemize} 
-	\item Cuts Sam used:
+	\begin{frame}{Motivation}
+		\begin{figure}
+			\includegraphics[width=5cm]{Plots/b2b}
+		\end{figure}
+	\end{frame}
+	
+	
+	
+	
+\begin{frame}{Motivation}
+	\begin{textblock*}{0.5\textwidth}(5cm,-3cm)
+		
+
 	
 	
 	\begin{itemize}
+		
 		\item $\textrm{gamma:probe}$ '$(\textrm{E} > 0.1 )$'
 		\item $\textrm{gamma:tag}$ '$(\textrm{clusterE} > 3.0)$'
-		\item $\textrm{vpho:cand}$ 'reconstructed from $\textrm{gamma:probe}$ and $\textrm{gamma:tag}$'
-	\end{itemize}
 
-	
-		\begin{itemize}
 			\item $0.296706 < \theta < 2.61799 \rightarrow$ It has to hit the ECL
 			\item $\textrm{nCleanedTracks}[ \textrm{abs}(\textrm{dz}) < 2.0 \textrm{ and } \textrm{abs}(\textrm{dr}) < 0.5 \textrm{ and nCDCHits} > 0 \textrm{ and pt } > 0.15] < 1 \rightarrow $ bad quality hits 
 						
 		\end{itemize}
+
+	\end{textblock*}
+
+	
+\begin{textblock*}{0.5\textwidth}(0cm,-2.5cm)
+	\includegraphics[width=4.5cm]{Plots/deltaPhiSam}
+\end{textblock*}
+
+\begin{textblock*}{0.5\textwidth}(-0.3cm,1cm)
+	$\textrm{vpho} \rightarrow \textrm{gamma:probe} + \textrm{gamma:tag}$
+\end{textblock*}
+	
+\end{frame}
+
+\begin{frame}{A first attempt}
+	\begin{textblock*}{\textwidth}(0cm,-4cm)
+	
+
+\begin{itemize}
+	\item Fill a list of all the particles with an ECL Cluster associated (gamma)
+	\item Reconstruct a Bhabha event from 2 of these objects
+	\item Select a proper region in the $\Delta \Phi$ plot and check how many times a track was associated to a cluster
 	
 \end{itemize}
 
-\begin{itemize}
-	\item Cuts I use:
+\begin{figure}
+	\includegraphics[width=10.5cm]{Plots/oldSc}
+\end{figure}
+
+	\end{textblock*}
+
+
+	
+
+	
+	\begin{textblock*}{0.55\textwidth}(0.0cm,-0.2cm)
+		\begin{figure}
+			\includegraphics<1>[width=4.5cm]{Plots/DeltaPhi}
+			\includegraphics<2>[width=4.5cm]{Plots/dphiMC}
+		\end{figure}
+	\end{textblock*}
+
+
+		\begin{textblock*}{0.4\textwidth}(5.1cm,0.5cm)
+			\begin{itemize}
+				\item<1> Prod 6
+		 \item<1> /hsm/belle2/bdata /Data/release-02-01-00 /DB00000438/prod00000006 /e0003/4S/r02*/all/mdst.sub00 /*.root
+\end{itemize}
+	\end{textblock*}
+	
+		\begin{textblock*}{0.55\textwidth}(5.1cm,-0.3cm)
 	\begin{itemize}
-		\item $\textrm{M(vpho)}>8.0\, \textrm{GeV}$ $\rightarrow$ For the vpho to have a mass of at least $8\,\textrm{GeV}$, $\textrm{gamma:tag}$ and $\textrm{gamma:probe}$ must have at least an energy of more than $3\,\textrm{GeV}$
-	
+		\item<2> MC11 $\textrm{ee}\rightarrow \textrm{ee}$
+		\item<2> very few vpho reconstructed, no tracks associated to the daughters
+		\item<2> $\rightarrow$ in the framework the gamma list is filled with objects with an ECL cluster and \underline{NO} track associated
+		\item<2> $\rightarrow$ wrong object to use for our purposes
 	\end{itemize}
-\end{itemize}
+\end{textblock*}
 
-	
-\end{frame}
 
-\begin{frame}{Reproducing Plots}
-	
-\begin{itemize}
-	\item For data I using prod6 (this is because as a starting point I tried to reproduce Sam's plots)
-	\item I am using the following data: /hsm/belle2/bdata/Data/release-02-01-00/DB00000438 /prod00000006/e0003/4S/r02*/all/mdst.sub00/*.root
-\end{itemize}
 
-	
-	\begin{figure}
-		\begin{subfigure}{.5\textwidth}
-			\centering
-			\includegraphics[width=4.5cm]{Plots/deltaPhiSam.jpeg}
-			
-			\label{fig:sub1}
-		\end{subfigure}%
-		\begin{subfigure}{.5\textwidth}
-			\centering
-			\includegraphics[width=4.5cm]{Plots/DeltaPhi.png}
-			
-			\label{fig:sub2}
-		\end{subfigure}
-		
-		\label{fig:test}
-	\end{figure}
-	
-	\begin{textblock*}{\textwidth}(1.7cm,-4.3cm)
-		\textcolor{blue}{Sam: All data files}
-	\end{textblock*}
-
-	\begin{textblock*}{\textwidth}(7.8cm,-4.3cm)
-		My
-	\end{textblock*}
-	
+\begin{textblock*}{0.4\textwidth}(1cm,0cm)
+	\only<1>{Plot on data:}
+	\only<2>{Plot on MC:}
+\end{textblock*}
 	
 	
 \end{frame}
@@ -134,64 +171,102 @@
 
 
 
-\begin{frame}{Original idea}
+\begin{frame}{Learning from experience}
+	\begin{textblock*}{\textwidth}(0cm,-4cm)
+	
 		\begin{itemize}
 			
-		\item Treat every hit in the ECL as a photon
-		\item After reconstruction, check if there is a track associated with the cluster
-		
+		\item To have a complete list of objects with an ECL cluster associated, one needs to "mix" two different lists, one of gammas and one of electrons
+	
 	\end{itemize}
 	
-\begin{figure}
-	\includegraphics[width=11cm]{Plots/oldSc}
-\end{figure}
-\begin{itemize}
-	\item As a first check I ran over MC11 $\textrm{ee}\rightarrow\textrm{ee}$ samples with the same steering file
-	\item Far too few vpho were reconstructed and the daughters had no tracks associated
-	\item Explanation: The $\gamma$ list is only filled by particles without a track
-	\item So the reconstruction from two $\gamma$ lists is exactly what we don't need
-\end{itemize}
-\end{frame}
-
-
-
-\begin{frame}{How to proceed}
-	\begin{itemize}
-		\item If there is a cluster in the ECL, we check if that cluster has a track associated. If it has than it is an $\textrm{e}^+/\textrm{e}^-$. If it has not then it is a $\gamma$ 
-		\item So the list we want is a list filled with every event in the ECL 
+\end{textblock*}
+	\begin{textblock*}{\textwidth}(0cm,-2.9cm)
 		
-		 
-	\end{itemize}
-
-\begin{figure}
-	\includegraphics[width=11cm]{Plots/newSc}
-\end{figure}
-
-\begin{itemize}
-	\item To add these two lists a \textit{pseudo} vpho has to be introduced 
-	\item The vpho we want can then be reconstructed
-\end{itemize}
-
-
-
-
-\end{frame}
-
-\begin{frame}{Running on MC}
-	\begin{itemize}
-		\item Running on MC11 $\textrm{ee}\rightarrow \textrm{ee}$ with new steering file
-	\end{itemize}
+	
 	\begin{figure}
-		\includegraphics[width=5.5cm]{Plots/isSignalDeltaPhi}
+		\includegraphics[width=10.5cm]{Plots/newSc}
 	\end{figure}
-\begin{itemize}
-	\item Pure Bhabha sample $\rightarrow$ No middle peak caused by $\gamma \gamma$ events
-	\item Difference between \textcolor{blue}{reconstructed} and \textcolor{red}{MCTruthMatched}  is caused by inefficiency
+
+\end{textblock*}
+	
+	
+	\begin{textblock*}{\textwidth}(0cm,-0.3cm)
+		
+
+	\begin{itemize}
+	\item The electron list does not require a ECL cluster$\rightarrow$ problem solved with the cut on clusterE
+	\item The framework does not allow to mix lists of different types $\rightarrow$ problem solved with the "trick" of two intermediate virtual photons
+	\item The ranking is a way for me to have the order of the daughters' under control
+	\item The Bhabha candidates are finally reconstructed starting from 2 ECLobjects
 \end{itemize}
+	\end{textblock*}
+\end{frame}
+
+
+
+\begin{frame}{$\Delta \Phi$ distribution, Prodx6}
+
+
+\begin{textblock*}{0.5\textwidth}(0cm,-2.5cm)
+	\includegraphics<1>[width=5cm]{Plots/DataLeft}
+	\includegraphics<2>[width=5cm]{Plots/DataAll}
+\end{textblock*}
+
+\begin{textblock*}{0.5\textwidth}(5cm,-3cm)
+	\begin{itemize}
+		\item Plot of $\Delta \Phi$ using the final vpho list
+		\item \textcolor{blue}{daughter\_0\_b2bClusterPhi - daughter\_1\_clusterPhi}
+		\item<2> \textcolor{red}{daughter\_1\_b2bClusterPhi - daughter\_0\_clusterPhi}
+		\item<2> \textcolor{orange}{Added both hists}
+	\end{itemize}
+\end{textblock*}
+
+	\begin{textblock*}{\textwidth}(0cm,1.5cm)
+	\begin{itemize}
+		\item<2> After adding the 2 hists I (of course) have double counted the events
+		\item<2> For my studies it would make more sense to concentrate on only one side to avoid double counting
+	\end{itemize}
+\end{textblock*}
+
+
 
 \end{frame}
 
-\begin{frame}{Running on MC}
+\begin{frame}{$\Delta \Phi$ distribution, MC11}
+	
+	
+	\begin{textblock*}{0.5\textwidth}(0cm,-2.5cm)
+		\includegraphics<1>[width=5cm]{Plots/MCDPhi}
+		
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\textwidth}(5cm,-3cm)
+		\begin{itemize}
+			\item Plot of $\Delta \Phi$ using the final vpho list
+			\item \textcolor{blue}{daughter\_0\_b2bClusterPhi - daughter\_1\_clusterPhi Reconstructed}
+			\item \colorbox{blue}{\textcolor{white}{MCTruthMatched}}
+			\item  \textcolor{red}{daughter\_1\_b2bClusterPhi - daughter\_0\_clusterPhi Reconstructed}
+			\item \colorbox{red}{\textcolor{white}{MCTruthMatched}}
+		
+		\end{itemize}
+	\end{textblock*}
+	
+	\begin{textblock*}{\textwidth}(0cm,2.5cm)
+	\begin{itemize}
+		\item The difference between reconstructed and MCTruthMatched is caused by inefficiency
+		
+	\end{itemize}
+\end{textblock*}
+	
+\end{frame}
+
+
+
+
+	
+
+\begin{frame}{$\Delta \Phi$ distribution, MC}
 	
 	\begin{textblock*}{\textwidth}(0cm,-3.8cm)
 		\begin{figure}
@@ -231,16 +306,16 @@
 	
 \end{textblock*}
 
-\begin{textblock*}{\textwidth}(1.15cm,3.3cm)
- $\gamma \gamma$
+\begin{textblock*}{0.2\textwidth}(0.0cm,3.3cm)
+ Two clusters; No track
 \end{textblock*}
 
-\begin{textblock*}{\textwidth}(5.2cm,3.3cm)
-	$\gamma \textrm{e}$
+\begin{textblock*}{0.2\textwidth}(4cm,3.3cm)
+	Two clusters; One track
 \end{textblock*}
 
-\begin{textblock*}{\textwidth}(9.25cm,3.3cm)
-	$\textrm{ee}$
+\begin{textblock*}{0.2\textwidth}(8cm,3.3cm)
+	Two clusters; Two tracks
 \end{textblock*}
 
 
@@ -252,10 +327,12 @@
 \end{frame}
 
 
-\begin{frame}{Number of candidates}
+
+\begin{frame}{Multiple candidates}
 	
 	\begin{itemize}
-		\item Number of reconstructed vpho per event is oftentimes bigger than 1
+		\item For some events, there is more than one vpho reconstructed
+		\item One needs to select only one vpho per event
 	\end{itemize}
 	
 	
@@ -276,16 +353,37 @@
 		
 		\label{fig:test}
 	\end{figure}
-	
+
+
+\begin{textblock*}{\textwidth}(1.7cm,-4.2cm)
+	Phase 2 Data
+\end{textblock*}	
+
+
+\begin{textblock*}{\textwidth}(7.8cm,-4.2cm)
+	MC
+\end{textblock*}
+
+\begin{textblock*}{\textwidth}(6.7cm,-3.7cm)
+	\begin{itemize}
+	{\small	\item \textcolor{blue}{Reconstructed}}
+	{\small	\item \textcolor{red}{MCTruthMatched}}
+	\end{itemize}
+\end{textblock*}
 	
 \end{frame}
 
 
 
-\begin{frame}{Next steps}
+\begin{frame}{Summary}
 	\begin{itemize}
-	\item Select best vpho
-	\item Cut on $\Delta \Phi_{\textrm{b2bpred -reco}}$ peak and calculate a first efficiency
+	\item After a rough beginning and a lot of gained experience, I am now (hopefully) on the right track 
+	\item I hope to provide a first estimation shortly after Easter
+	\item I still need to handle few things before it:
+	\begin{itemize}
+		\item Select the best $\textrm{vpho:bhabha}$ candidate
+		\item Define the signal region in the $\Delta \Phi$ plot based on MC
+	\end{itemize}
 \end{itemize}
 \end{frame}
 \end{document}

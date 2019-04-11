@@ -1,10 +1,5 @@
-\beamer@slide {fig:sub1}{4}
-\beamer@slide {sub@fig:sub1}{4}
-\beamer@slide {fig:sub2}{4}
-\beamer@slide {sub@fig:sub2}{4}
-\beamer@slide {fig:test}{4}
-\beamer@slide {fig:sub1}{9}
-\beamer@slide {sub@fig:sub1}{9}
-\beamer@slide {fig:sub2}{9}
-\beamer@slide {sub@fig:sub2}{9}
-\beamer@slide {fig:test}{9}
+\beamer@slide {fig:sub1}{12}
+\beamer@slide {sub@fig:sub1}{12}
+\beamer@slide {fig:sub2}{12}
+\beamer@slide {sub@fig:sub2}{12}
+\beamer@slide {fig:test}{12}
