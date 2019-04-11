@@ -12,6 +12,7 @@
 \usepackage{subcaption}
 \usepackage{xspace}
 \usepackage{hyperref,xcolor}
+\usepackage{textpos}
 
 \usepackage{makeidx}
 \definecolor{winered}{rgb}{0.5,0,0}
@@ -48,11 +49,11 @@
 
 \end{itemize}
 	\begin{equation*}
-		\epsilon = \frac{\textrm{Number of Bhabha events with exactly 2 tracks}}{\textrm{Number of Bhabha events with one or more tracks}}
+		\epsilon = \frac{\textrm{Number of Bhabha events with exactly 2 tracks}}{\textrm{Number of Bhabha events with 1 or more tracks}}
 	\end{equation*}
 	
 	\begin{itemize}
-		\item  This idea comes from some plots presented by Sam in previous  \href{https://confluence.desy.de/display/BI/ECL+Meetings?preview=/84320165/109161400/SCunliffe181123-ECL.pdf}{tracking and ECL} meetings.
+		\item  This idea comes from some plots presented by Sam Cunliffe in previous  \href{https://confluence.desy.de/display/BI/ECL+Meetings?preview=/84320165/109161400/SCunliffe181123-ECL.pdf}{tracking and ECL} meetings.
 	\end{itemize}
 
 
@@ -68,16 +69,16 @@
 	
 	
 	\begin{itemize}
-		\item gamma:probe '$(\textrm{E} > 0.1 )$'
-		\item gamma:tag '$(\textrm{clusterE} > 3.0)$'
-		\item vpho:cand 'reconstructed from gamma:probe and gamma:tag'
+		\item $\textrm{gamma:probe}$ '$(\textrm{E} > 0.1 )$'
+		\item $\textrm{gamma:tag}$ '$(\textrm{clusterE} > 3.0)$'
+		\item $\textrm{vpho:cand}$ 'reconstructed from $\textrm{gamma:probe}$ and $\textrm{gamma:tag}$'
 	\end{itemize}
 
 	
 		\begin{itemize}
 			\item $0.296706 < \theta < 2.61799 \rightarrow$ It has to hit the ECL
 			\item $\textrm{nCleanedTracks}[ \textrm{abs}(\textrm{dz}) < 2.0 \textrm{ and } \textrm{abs}(\textrm{dr}) < 0.5 \textrm{ and nCDCHits} > 0 \textrm{ and pt } > 0.15] < 1 \rightarrow $ bad quality hits 
-			\item $\textrm{M}(\textrm{vpho}) > 8.0\,\textrm{GeV} \rightarrow $ To cut away background (not from his email but surely he is using something like that)					
+						
 		\end{itemize}
 	
 \end{itemize}
@@ -95,40 +96,48 @@
 
 \begin{frame}{Reproducing Plots}
 	
-	\begin{itemize}
-		\item The plots in the following slides are produced using prod6 (this is because as a starting point I tried to reproduce Sam's plots)
-		\item Sam used all Prod6 data. I am only using the following: /hsm/belle2/bdata/Data/release-02-01-00/DB00000438 /prod00000006/e0003/4S/r02*/all/mdst.sub00/*.root
-		
-		\item Sam's plot is on the left.	
-		
+\begin{itemize}
+	\item For data I using prod6 (this is because as a starting point I tried to reproduce Sam's plots)
+	\item I am using the following data: /hsm/belle2/bdata/Data/release-02-01-00/DB00000438 /prod00000006/e0003/4S/r02*/all/mdst.sub00/*.root
 \end{itemize}
-	
+
 	
 	\begin{figure}
 		\begin{subfigure}{.5\textwidth}
-		\centering
-		\includegraphics[width=5cm]{Plots/deltaPhiSam.jpeg}
+			\centering
+			\includegraphics[width=4.5cm]{Plots/deltaPhiSam.jpeg}
+			
+			\label{fig:sub1}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=4.5cm]{Plots/DeltaPhi.png}
+			
+			\label{fig:sub2}
+		\end{subfigure}
 		
-		\label{fig:sub1}
-	\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-\centering
-\includegraphics[width=5cm]{Plots/DeltaPhi.pdf}
-
-\label{fig:sub2}
-\end{subfigure}
-
-\label{fig:test}
+		\label{fig:test}
 	\end{figure}
+	
+	\begin{textblock*}{\textwidth}(1.7cm,-4.3cm)
+		\textcolor{blue}{Sam: All data files}
+	\end{textblock*}
+
+	\begin{textblock*}{\textwidth}(7.8cm,-4.3cm)
+		My
+	\end{textblock*}
+	
 	
 	
 \end{frame}
 
 
+
+
 \begin{frame}{Original idea}
 		\begin{itemize}
 			
-		\item Tread every hit in the ECL as a photon
+		\item Treat every hit in the ECL as a photon
 		\item After reconstruction, check if there is a track associated with the cluster
 		
 	\end{itemize}
@@ -138,7 +147,7 @@
 \end{figure}
 \begin{itemize}
 	\item As a first check I ran over MC11 $\textrm{ee}\rightarrow\textrm{ee}$ samples with the same steering file
-	\item Far too few vpho were reconstructed
+	\item Far too few vpho were reconstructed and the daughters had no tracks associated
 	\item Explanation: The $\gamma$ list is only filled by particles without a track
 	\item So the reconstruction from two $\gamma$ lists is exactly what we don't need
 \end{itemize}
@@ -148,8 +157,8 @@
 
 \begin{frame}{How to proceed}
 	\begin{itemize}
-		\item If there is a cluster in the ECL, then we look if that cluster has a track associated. If it has than it is a electron/positron. If it has not then it is a gamma 
-		\item So the list we want is the electron list plus the gamma list
+		\item If there is a cluster in the ECL, we check if that cluster has a track associated. If it has than it is an $\textrm{e}^+/\textrm{e}^-$. If it has not then it is a $\gamma$ 
+		\item So the list we want is a list filled with every event in the ECL 
 		
 		 
 	\end{itemize}
@@ -159,27 +168,116 @@
 \end{figure}
 
 \begin{itemize}
-	\item 
+	\item To add these two lists a \textit{pseudo} vpho has to be introduced 
+	\item The vpho we want can then be reconstructed
 \end{itemize}
 
-\begin{figure}
-	\includegraphics[width=5.5cm]{Plots/isSignalDeltaPhi}
-\end{figure}
 
 
 
 \end{frame}
 
-\begin{frame}{More problems}
+\begin{frame}{Running on MC}
 	\begin{itemize}
-		\item<1,2> Double peak structure has to be understood 
-		\item<2> Sometimes more than one vpho per event is reconstructed 
+		\item Running on MC11 $\textrm{ee}\rightarrow \textrm{ee}$ with new steering file
 	\end{itemize}
-\begin{figure}
-	\includegraphics<1>[width=5.5cm]{Plots/MCDeltaPhi}
-	\includegraphics<2>[width=5.5cm]{Plots/NumVpho}
-\end{figure}
+	\begin{figure}
+		\includegraphics[width=5.5cm]{Plots/isSignalDeltaPhi}
+	\end{figure}
+\begin{itemize}
+	\item Pure Bhabha sample $\rightarrow$ No middle peak caused by $\gamma \gamma$ events
+	\item Difference between \textcolor{blue}{reconstructed} and \textcolor{red}{MCTruthMatched}  is caused by inefficiency
+\end{itemize}
 
+\end{frame}
+
+\begin{frame}{Running on MC}
+	
+	\begin{textblock*}{\textwidth}(0cm,-3.8cm)
+		\begin{figure}
+			\includegraphics[width=4cm]{Plots/isSignalDeltaPhi}
+		
+		\end{figure}
+	\end{textblock*}
+
+\begin{textblock*}{\textwidth}(-4cm,-0.5cm)
+	\begin{figure}
+		\includegraphics[width=4cm]{Plots/MCgg}
+	\end{figure}
+	
+\end{textblock*}
+
+
+\begin{textblock*}{\textwidth}(0cm,-0.5cm)
+	\begin{figure}
+		\includegraphics[width=4cm]{Plots/MCeg}
+	\end{figure}
+	
+	\end{textblock*}	
+
+\begin{textblock*}{\textwidth}(4cm,-0.5cm)
+	\begin{figure}
+		\includegraphics[width=4cm]{Plots/MCee}
+	\end{figure}
+	
+\end{textblock*}	
+
+\begin{textblock*}{\textwidth}(7.5cm,-3.35cm)
+	\begin{itemize}
+		\item MC11 $\textrm{ee} \rightarrow \textrm{ee}$ sample
+		\item Reconstructed \textcolor{blue}{blue}
+		\item MCTruthMatched \textcolor{red}{red}
+	\end{itemize}
+	
+\end{textblock*}
+
+\begin{textblock*}{\textwidth}(1.15cm,3.3cm)
+ $\gamma \gamma$
+\end{textblock*}
+
+\begin{textblock*}{\textwidth}(5.2cm,3.3cm)
+	$\gamma \textrm{e}$
+\end{textblock*}
+
+\begin{textblock*}{\textwidth}(9.25cm,3.3cm)
+	$\textrm{ee}$
+\end{textblock*}
+
+
+\begin{textblock*}{\textwidth}(5.2cm,-3.6cm)
+	all
+\end{textblock*}
+
+
+\end{frame}
+
+
+\begin{frame}{Number of candidates}
+	
+	\begin{itemize}
+		\item Number of reconstructed vpho per event is oftentimes bigger than 1
+	\end{itemize}
+	
+	
+	
+		\begin{figure}
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=4.5cm]{Plots/NumVpho}
+			
+			\label{fig:sub1}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=4.5cm]{Plots/NumVphoMC}
+			
+			\label{fig:sub2}
+		\end{subfigure}
+		
+		\label{fig:test}
+	\end{figure}
+	
+	
 \end{frame}
 
 
