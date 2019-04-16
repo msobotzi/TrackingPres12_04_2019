@@ -79,14 +79,9 @@
 		\begin{figure}
 			\includegraphics[width=5cm]{Plots/b2b}
 		\end{figure}
-	\begin{itemize}
-	\item The two tracks have opposite curvature due to their opposite charge
-\end{itemize}
-
-
 	\end{frame}
 	
-
+	
 	
 	
 \begin{frame}{Motivation}
@@ -100,8 +95,8 @@
 		\item $\textrm{gamma:probe}$ '$(\textrm{E} > 0.1 )$'
 		\item $\textrm{gamma:tag}$ '$(\textrm{clusterE} > 3.0)$'
 
-			\item $0.296706 < \theta < 2.61799 $
-			\item $\textrm{nCleanedTracks}[ \textrm{abs}(\textrm{dz}) < 2.0 \textrm{ and } \textrm{abs}(\textrm{dr}) < 0.5 \textrm{ and nCDCHits} > 0 \textrm{ and pt } > 0.15] < 1  $
+			\item $0.296706 < \theta < 2.61799 \rightarrow$ It has to hit the ECL
+			\item $\textrm{nCleanedTracks}[ \textrm{abs}(\textrm{dz}) < 2.0 \textrm{ and } \textrm{abs}(\textrm{dr}) < 0.5 \textrm{ and nCDCHits} > 0 \textrm{ and pt } > 0.15] < 1 \rightarrow $ bad quality hits 
 						
 		\end{itemize}
 
@@ -115,12 +110,6 @@
 \begin{textblock*}{0.5\textwidth}(-0.3cm,1cm)
 	$\textrm{vpho} \rightarrow \textrm{gamma:probe} + \textrm{gamma:tag}$
 \end{textblock*}
-
-\begin{textblock*}{0.5\textwidth}(0.1cm,-3cm)
-	Sams Plot
-\end{textblock*}
-
-
 	
 \end{frame}
 
@@ -163,7 +152,7 @@
 		\begin{textblock*}{0.55\textwidth}(5.1cm,-0.3cm)
 	\begin{itemize}
 		\item<2> MC11 $\textrm{ee}\rightarrow \textrm{ee}$
-		\item<2> very few $\textrm{vpho:bhabha}$ reconstructed, no tracks associated to the daughters
+		\item<2> very few vpho reconstructed, no tracks associated to the daughters
 		\item<2> $\rightarrow$ in the framework the gamma list is filled with objects with an ECL cluster and \underline{NO} track associated
 		\item<2> $\rightarrow$ wrong object to use for our purposes
 	\end{itemize}
@@ -216,7 +205,7 @@
 
 
 
-\begin{frame}{$\Delta \Phi$ distribution, prod6}
+\begin{frame}{$\Delta \Phi$ distribution, Prodx6}
 
 
 \begin{textblock*}{0.5\textwidth}(0cm,-2.5cm)
@@ -226,7 +215,7 @@
 
 \begin{textblock*}{0.5\textwidth}(5cm,-3cm)
 	\begin{itemize}
-		\item The 3 peaks distribution is the result of considering each candidate as "tag" and as "probe"
+		\item Plot of $\Delta \Phi$ using the final vpho list
 		\item \textcolor{blue}{daughter\_0\_b2bClusterPhi - daughter\_1\_clusterPhi}
 		\item<2> \textcolor{red}{daughter\_1\_b2bClusterPhi - daughter\_0\_clusterPhi}
 		\item<2> \textcolor{orange}{Added both hists}
@@ -254,7 +243,7 @@
 	
 	\begin{textblock*}{0.5\textwidth}(5cm,-3cm)
 		\begin{itemize}
-			\item The 3 peaks distribution is the result of considering each candidate as "tag" and as "probe"
+			\item Plot of $\Delta \Phi$ using the final vpho list
 			\item \textcolor{blue}{daughter\_0\_b2bClusterPhi - daughter\_1\_clusterPhi Reconstructed}
 			\item \colorbox{blue}{\textcolor{white}{MCTruthMatched}}
 			\item  \textcolor{red}{daughter\_1\_b2bClusterPhi - daughter\_0\_clusterPhi Reconstructed}
@@ -263,7 +252,13 @@
 		\end{itemize}
 	\end{textblock*}
 	
-
+	\begin{textblock*}{\textwidth}(0cm,2.5cm)
+	\begin{itemize}
+		\item The difference between reconstructed and MCTruthMatched is caused by inefficiency
+		
+	\end{itemize}
+\end{textblock*}
+	
 \end{frame}
 
 
@@ -271,7 +266,7 @@
 
 	
 
-\begin{frame}{$\Delta \Phi$ distribution for different numbers of tracks, MC}
+\begin{frame}{$\Delta \Phi$ distribution, MC}
 	
 	\begin{textblock*}{\textwidth}(0cm,-3.8cm)
 		\begin{figure}
@@ -370,10 +365,10 @@
 \end{textblock*}
 
 \begin{textblock*}{\textwidth}(6.7cm,-3.7cm)
-%	\begin{itemize}
-%	{\small	\item \textcolor{blue}{Reconstructed}}
-%	{\small	\item \textcolor{red}{MCTruthMatched}}
-%	\end{itemize}
+	\begin{itemize}
+	{\small	\item \textcolor{blue}{Reconstructed}}
+	{\small	\item \textcolor{red}{MCTruthMatched}}
+	\end{itemize}
 \end{textblock*}
 	
 \end{frame}
@@ -391,4 +386,113 @@
 	\end{itemize}
 \end{itemize}
 \end{frame}
+
+
+\section{Collection}
+
+\begin{frame}
+Als erstes Sams plots nachmachen. Siehe andere Praesentation. Es geht um die triple Peaks und die 2D Delta Phi peaks. (andere presentation)
+MassenCut von 8 ueberall.
+Anschliessen ueber MC laufen. Man hat da alles besser unter kontrolle. Problem mit den Listen (siehe presentation).
+MC muss erst komplett verstanden werden.
+Es sollte eigentlich nur vpho pro event geben. $\rightarrow$ viel background. Erhoehe den MassCut von 8 auf 9 GeV. 
+
+Es gibt auch einen Unterschied zwischen b2bPhi und b2bClusterPhi. bei b2bPhi wird noch beruecksichtigt um welches teilchenes sich gehandelt hat. Folglich wird auch die Krummung der Elektronen im Magnetfeld beruecksichtigt. Was wir aber wollen, um den nterschied zu bestimmen ist b2bphi. siehe skizze.
+bei der skizze muss auch beachtete werden, dass eigentlich ins schwerpunktsystem geboostet wird dann der b2b angle bestimmt wird und dann wieder zurueck geboostet wird. das ist wichtig, weil der boost nicht genau entlang der x achse verlaeuft.
+\end{frame}
+
+
+\begin{frame}
+	\begin{figure}
+		\includegraphics[width=6cm]{Collection/MCMNoCuts}
+	\end{figure}
+Masse des virtuellen Photons im Bhabha Event. Logarithmische Skala aufgrund des starken Backgrounds fuer kleine Massen. Als erstes wurde ein sehr grosszuegiger Cut mit M groesser als 8GeV gewaehlt um das Verhalten von MC besser zu verstehen.
+
+\end{frame}
+
+
+
+
+\begin{frame}
+	\begin{figure}
+		\includegraphics[width=6cm]{Collection/MCM8}
+	\end{figure}
+
+der erstmal einziger Cut der angewendet wird, um einen grossteil des backgrounds weg zu schneiden.
+
+Zu sehen ist ausserdem der Peak bei M$\approx$ 10 GeV (\textit{invariante Masse}). Was der schwerpunktsenergie  des Beschleunigers entspricht. Man kann auch hier noch sehr viel Hintergrund vermuten.
+
+
+
+
+\end{frame}
+
+
+
+
+
+\begin{frame}
+	\begin{figure} 
+	\includegraphics[width=6cm]{Collection/MCEE8_all}
+\end{figure}
+
+urspruenglich kein Cut auf die daughters damit man alles besser verstehen kann. In dem Plot sieht man dass ranking funkioniert. (kein Probe hat mehr energie als ein Tag) und dass ein cluster energy cut auf die daughters auch sinnvoll ist. auch beide daughters sollten auf clusterE gecutet werden. Dadurch wird automatisch verlangt dass sie den ECL treffen da nur dort cluster entstehen koennen. Ein theta cut wird dadurch nicht mehr benoetigt
+. 
+
+
+\end{frame}
+
+\begin{frame}
+
+	\begin{figure}
+		\includegraphics[width=6cm]{Collection/firstEffMC8NoEE}
+	\end{figure}
+
+erste efficiency auf MC. Events mit 2 tracks und 2 cluster rechts und events mit 2 cluster und 1 tracks links. Plot vor nCandsCut (also noch viele nCands vpho pro event) plot vor energy und time cut auf die daughters. pi mal daumen ist das eine efficienz von nur rund 70prozent und das waere fatal $\rightarrow$ hoffentlich ist das meiste durch background verursacht und wird besser mit den weiteren cuts . (sollte wirklich nicht sein). es wurde auf die triple delta phi plots geschnitten. Es wurde sich auf den rechten konzentriert $\rightarrow$ $"( daughter\_0\_b2bClusterPhi - daughter\_1\_clusterPhi) > -0.2 \&\& (daughter\_0\_b2bClusterPhi - daughter\_1\_clusterPhi) < -0.1 \&\& M>8.0"$
+
+
+\end{frame}
+
+\begin{frame}
+
+\begin{figure}
+	\includegraphics[width=6cm]{Collection/MCtrackMatch8}
+\end{figure}
+immer noch vor energy timing nCand vpho Cuts. es geht hier darum wenn duahgter 1 einen track hat, hat daughter 0 dann auch einen und anders herum. Meistens haben beide einen Track (gut das ist effizienz). Das naechst haeuffigste ist dass beide keinen Track besitzen. Davon gibt es mehr Eintraege als das Probe einen Track hat und Tag nicht. (Pures bhabha sample).
+
+
+\end{frame}
+
+\begin{frame}
+	\begin{figure}
+		\includegraphics[width=6cm]{Collection/MCclusterTiming8}
+	\end{figure}
+
+clusterTiming fuer probe und tag. in [ns?] komische struktur. Wieder vor allen energy timing nCand vpho Cuts.  M(vpho) groesser als 9GeV. Diagonale kommt mir komisch vor. Ich nehme mal an, dass die events an denen ich interessiert bin, sich um die 0,0 befinden.
+
+
+\end{frame}
+
+\section{Verbesserung der Cuts}
+
+\begin{frame}
+	Es muessen eindeutig Cuts eingefuehrt, bzw verbessert werden.
+	
+	Deswegen erstmal den MassenCut erhoehen. Einen EnergieCut auf die daughters einfuehren. Cuts aufs Timing.
+	
+	
+	
+	Und dann nochmal nCands plotten und hoffen, dass es deutlich runter geht.
+	
+	
+	
+	
+	
+	
+	
+\end{frame}
+
+
+
+
 \end{document}
