@@ -445,10 +445,12 @@ urspruenglich kein Cut auf die daughters damit man alles besser verstehen kann. 
 \begin{frame}
 
 	\begin{figure}
-		\includegraphics[width=6cm]{Collection/firstEffMC8NoEE}
+		\includegraphics[width=3cm]{Collection/firstEffMC8NoEE}
 	\end{figure}
 
 erste efficiency auf MC. Events mit 2 tracks und 2 cluster rechts und events mit 2 cluster und 1 tracks links. Plot vor nCandsCut (also noch viele nCands vpho pro event) plot vor energy und time cut auf die daughters. pi mal daumen ist das eine efficienz von nur rund 70prozent und das waere fatal $\rightarrow$ hoffentlich ist das meiste durch background verursacht und wird besser mit den weiteren cuts . (sollte wirklich nicht sein). es wurde auf die triple delta phi plots geschnitten. Es wurde sich auf den rechten konzentriert $\rightarrow$ $"( daughter\_0\_b2bClusterPhi - daughter\_1\_clusterPhi) > -0.2 \&\& (daughter\_0\_b2bClusterPhi - daughter\_1\_clusterPhi) < -0.1 \&\& M>8.0"$
+
+Hier wurde doppelt gezaehlt. Sollte aber bei der Effizienz nicht so schlimm sein(oder?) 
 
 
 \end{frame}
@@ -456,7 +458,7 @@ erste efficiency auf MC. Events mit 2 tracks und 2 cluster rechts und events mit
 \begin{frame}
 
 \begin{figure}
-	\includegraphics[width=6cm]{Collection/MCtrackMatch8}
+	\includegraphics[width=3cm]{Collection/MCtrackMatch8}
 \end{figure}
 immer noch vor energy timing nCand vpho Cuts. es geht hier darum wenn duahgter 1 einen track hat, hat daughter 0 dann auch einen und anders herum. Meistens haben beide einen Track (gut das ist effizienz). Das naechst haeuffigste ist dass beide keinen Track besitzen. Davon gibt es mehr Eintraege als das Probe einen Track hat und Tag nicht. (Pures bhabha sample).
 
@@ -468,7 +470,7 @@ immer noch vor energy timing nCand vpho Cuts. es geht hier darum wenn duahgter 1
 		\includegraphics[width=6cm]{Collection/MCclusterTiming8}
 	\end{figure}
 
-clusterTiming fuer probe und tag. in [ns?] komische struktur. Wieder vor allen energy timing nCand vpho Cuts.  M(vpho) groesser als 9GeV. Diagonale kommt mir komisch vor. Ich nehme mal an, dass die events an denen ich interessiert bin, sich um die 0,0 befinden.
+clusterTiming fuer probe und tag. in [ns?] komische struktur. Wieder vor allen energy timing nCand vpho Cuts.  M(vpho) groesser als 9GeV. Diagonale kommt mir komisch vor. Ich nehme mal an, dass die events an denen ich interessiert bin, sich um die 0,0 befinden. Bzw auf der diagonalen, denn dann haben wir eine Korrelation zwischen den beiden daughters
 
 
 \end{frame}
@@ -480,10 +482,11 @@ clusterTiming fuer probe und tag. in [ns?] komische struktur. Wieder vor allen e
 	
 	Deswegen erstmal den MassenCut erhoehen. Einen EnergieCut auf die daughters einfuehren. Cuts aufs Timing.
 	
-	
+	Theta Winkel von Tag muesste eigentlich immer kleiner sein als der von tag. Auch sollte Tag eigentlich keinen Theta Winkel von 90 Grad oder mehr besitzen.
 	
 	Und dann nochmal nCands plotten und hoffen, dass es deutlich runter geht.
 	
+	Erstmal MC deutlich besser verstehen
 	
 	
 	
